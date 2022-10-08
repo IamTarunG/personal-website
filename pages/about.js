@@ -12,7 +12,7 @@ function About() {
                 <p className=" text-gray-400 dark:text-gray-400 lg:mx-96 sm:mx-10">
                     Hi. I am Tarun.
                     <br />
-                    I build Web Applications. I explore the latest faremworks related to JavaScript, but I stick to only one.
+                    I build Web Applications. I explore the latest frameworks related to JavaScript, but I stick to only one.
                     I am currently using <Link href={'https://nextjs.org/'}><a className="underline">Next.js</a></Link> as my frontend tool.
                     I love to do 3D renders using <Link href={'https://www.blender.org/'}><a className="underline">Blender.</a></Link>
                 </p>
