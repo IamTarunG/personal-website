@@ -17,7 +17,7 @@ function HeadContent({ title, description }) {
         <meta name="twitter:site" content="@_tarungudipalli" />
         <meta name="twitter:title" content="Tarun" />
         <meta name="twitter:description" content="Focused on Web Development.Love to do 3D renders." />
-
+        <link rel="icon" type="image/png" sizes="32x32" href="/tg.png"></link>
 
       </Head>
     </>
