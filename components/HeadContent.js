@@ -7,7 +7,8 @@ function HeadContent({ title, description }) {
         <title>{title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={description} name="description" />
-
+        <meta property="og:url" content={`https://tarungudipalli.vercel.app${router.asPath}`} />
+        <link rel="canonical" href={`https://tarungudipalli.vercel.app${router.asPath}`} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Tarun Gudipalli" />
         <meta property="og:description" content={description} />
