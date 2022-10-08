@@ -1,10 +1,10 @@
 import React from 'react'
 import ProjectCard from '../components/ProjectCard'
-
+import HeadContent from '../components/HeadContent'
 function MyWork() {
     return (
         <div>
-
+            <HeadContent title={"My Work - Tarun Gudipalli"} description="The my work page contains all my projects done with React and Next.js" />
             <section className="mt-20 text-center">
                 <p className="text-white dark:text-gray-100 font-bold text-3xl md:text-3xl tracking-tight mb-5">My Work</p>
                 <p className="mb-5 text-gray-400 dark:text-gray-400 lg:mx-96 sm:mx-10">
