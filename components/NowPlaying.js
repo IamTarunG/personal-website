@@ -81,7 +81,7 @@ function NowPlaying() {
     const { data } = useSWR('spotifydata', fetcher)
 
 
-    console.log(data)
+
     return (
         <div className='flex items-center justify-center'>
             {data && data.is_playing ? (

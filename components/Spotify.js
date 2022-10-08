@@ -45,8 +45,7 @@ function Spotify() {
             </div>
         )
     }
-    console.log(toptracks)
-    console.log(toptracks.items.slice(0, 10))
+
     const items = toptracks.items.slice(0, 10)
     const tracks = items.map((track) => ({
         artist: track.artists.map((_artist) => _artist.name).join(', '),
