@@ -1,6 +1,7 @@
 import Head from "next/head"
-
+import { useRouter } from 'next/router'
 function HeadContent({ title, description }) {
+  const router = useRouter()
   return (
     <>
       <Head>
