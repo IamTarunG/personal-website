@@ -1,66 +1,33 @@
 
-import { getTopTracks } from '../lib/spotify'
+
 import useSWR from 'swr'
+import fetcher from '../lib/fetcher'
 import Spinner from './Spinner'
-import { useState, useEffect } from 'react'
-// const fetcher = async () => {
-//     const response = await getTopTracks()
-//     const data = await response.json()
-//     return data
-// }
+
 function Spotify() {
-    const [toptracks, setToptracks] = useState()
-    const [loading, setLoading] = useState(true)
-    // const { data, error } = useSWR('spotifydata', fetcher)
-    useEffect(() => {
-        const getTracks = async () => {
-            const response = await getTopTracks()
-            const data = await response.json()
-            setToptracks(data)
-            setLoading(false)
-        }
-        getTracks()
-    }, [])
+    const { data } = useSWR('/api/top-tracks', fetcher)
 
 
-    // if (!data) {
-    //     return (
-    //         <div className='text-center mt-10'>
-    //             <Spinner />
-    //         </div>
-    //     )
-    // }
-    // if (error) {
-    //     return (
-    //         <div>
-    //             <p className='text-center text-red-600 text-md mt-10 dark:text-red-500'>Make sure to have proper internet connection</p>
-    //         </div>
-    //     )
-    // }
-    if (loading) {
+
+    if (!data) {
         return (
             <div className='text-center mt-10'>
-
                 <Spinner />
             </div>
         )
     }
 
-    const items = toptracks.items.slice(0, 10)
-    const tracks = items.map((track) => ({
-        artist: track.artists.map((_artist) => _artist.name).join(', '),
-        songUrl: track.external_urls.spotify,
-        title: track.name,
-        id: track.id
-    }));
+
+
+
 
 
     return (
         <div>
             {
-                tracks.map((track, index) => {
+                data.map((track, index) => {
                     return (
-                        <div className="flex flex-row items-baseline border-b border-gray-700  max-w-3xl w-full mt-8" key={track.id}>
+                        <div className="flex flex-row items-baseline border-b border-gray-700  max-w-3xl w-full mt-8" key={track.songUrl}>
                             <p className="text-sm font-bold text-gray-400 dark:text-gray-600">
                                 {index + 1}
                             </p>
@@ -84,6 +51,7 @@ function Spotify() {
                     )
                 })
             }
+
         </div>
     )
 

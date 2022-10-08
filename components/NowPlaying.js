@@ -1,7 +1,8 @@
 import useSWR from 'swr'
 import { useEffect } from 'react'
-import { getNowPlaying } from '../lib/spotify'
+
 import { animate } from 'motion'
+import fetcher from '../lib/fetcher';
 function AnimatedBars() {
     useEffect(() => {
         animate(
@@ -73,18 +74,13 @@ function AnimatedBars() {
 
 function NowPlaying() {
 
-    const fetcher = async () => {
-        const response = await getNowPlaying()
-        const data = await response.json()
-        return data
-    }
-    const { data } = useSWR('spotifydata', fetcher)
 
+    const { data } = useSWR('/api/now-playing', fetcher)
 
 
     return (
         <div className='flex items-center justify-center'>
-            {data && data.is_playing ? (
+            {data && data.isPlaying ? (
                 <AnimatedBars />
             ) : (
                 <svg className="h-4 w-4 mx-2" viewBox="0 0 168 168">
@@ -95,14 +91,14 @@ function NowPlaying() {
                 </svg>
             )}
             <div className="inline-flex flex-col sm:flex-row w-full max-w-full truncate">
-                {data && data.is_playing ? (
+                {data && data.isPlaying ? (
                     <a
                         className="capsize text-gray-100 dark:text-gray-100 font-medium  max-w-max truncate"
-                        href={data.item.external_urls.spotify}
+                        href={data.songUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        {data.item.name}
+                        {data.title}
                     </a>
                 ) : (
                     <p className="capsize text-gray-100 dark:text-gray-200 font-medium">
@@ -113,7 +109,7 @@ function NowPlaying() {
                     {'-'}
                 </span>
                 <div className="capsize text-gray-500 dark:text-gray-500 max-w-max truncate">
-                    {data && data.is_playing ? data.item.artists.map((artist) => artist.name).join(', ') : 'Spotify'}
+                    {data && data.isPlaying ? data.artist : 'Spotify'}
                 </div>
             </div>
         </div>
