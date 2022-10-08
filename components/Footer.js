@@ -1,9 +1,11 @@
 import React from 'react'
 import NowPlaying from './NowPlaying'
 import Link from 'next/link'
+import HeadContent from './HeadContent'
 function Footer() {
     return (
         <footer className="flex flex-col justify-center items-start max-w-2xl mx-auto w-full">
+            <HeadContent title={"My Work - Tarun Gudipalli"} description="The my work page contains all my projects done with React and Next.js" />
             <hr className="w-full border-1 border-gray-800 dark:border-gray-800 mb-8" />
             <NowPlaying />
             <div className="py-5 w-full max-w-2xl grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3 ">
