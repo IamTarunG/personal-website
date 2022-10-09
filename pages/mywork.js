@@ -3,7 +3,7 @@ import ProjectCard from '../components/ProjectCard'
 import HeadContent from '../components/HeadContent'
 function MyWork() {
     return (
-        <div>
+        <main>
             <HeadContent title={"My Work - Tarun Gudipalli"} description="The my work page contains all my projects done with React and Next.js" />
             <section className="mt-20 text-center">
                 <p className="text-white dark:text-gray-100 font-bold text-3xl md:text-3xl tracking-tight mb-5">My Work</p>
@@ -20,7 +20,7 @@ function MyWork() {
                 <ProjectCard title={"News Today"} description="The Newstoday application gives the latest news around technology, sports, business, entertainment and many more categories. it has an infinite scroll feature.this application is done using reactjs" link={"https://github.com/IamTarunG/News-App/tree/functional-component"} />
 
             </section>
-        </div>
+        </main>
     )
 }
 
