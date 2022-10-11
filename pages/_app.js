@@ -1,16 +1,15 @@
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import '../styles/globals.css'
+import Layout from "../components/Layout";
+
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <div className='font-poppins bg-gray-900'>
-
-
-    <Navbar />
-
-    <Component {...pageProps} />
-    <Footer />
-  </div>
+  return (
+    <div className="font-poppins bg-gray-900">
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </div>
+  );
 }
 
-export default MyApp
+export default MyApp;
