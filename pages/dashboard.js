@@ -4,6 +4,7 @@ import Spotify from "../components/Spotify"
 import Unsplash from "../components/Unsplash"
 
 
+
 function Dashboard() {
 
     return (
@@ -16,11 +17,16 @@ function Dashboard() {
                 </p>
             </section>
             <section className="lg:mx-96 sm:mx-20">
+
+
+
                 <Unsplash />
+
+
             </section>
             <section className="mt-16">
                 <p className=" text-white dark:text-gray-100 mb-5 text-center font-bold text-2xl md:text-2xl tracking-tight">Top Tracks</p>
-                <p className=" text-gray-400 dark:text-gray-400 text-center">Want to know what I am currently listening to? Hers&apos;s my top tracks on Spotify.</p>
+                <p className=" text-gray-400 dark:text-gray-400 text-center">Want to know what I am listening to? Hers&apos;s my top tracks on Spotify updated daily.</p>
                 <section className=" lg:mx-96 sm:mx-20">
 
 
