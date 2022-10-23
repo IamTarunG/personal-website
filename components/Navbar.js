@@ -10,9 +10,9 @@ function NavItem({ href, text }) {
 
     return (
 
-        <Link href={href}>
+        <Link href={href} >
             <a
-                className={`${isActive ? "font-semibold text-white dark:text-gray-200 bg-gray-900 px-3 py-3 rounded-md" : "font-normal text-gray-600 dark:text-gray-400"} transition-all hover:bg-gray-700 px-3 py-3 rounded-md`}
+                className={` ${isActive ? "font-semibold text-white dark:text-gray-200 bg-gray-900 px-3 py-3 rounded-md" : "font-normal text-gray-600 dark:text-gray-400"} transition-all hover:bg-gray-700 px-3 py-3 rounded-md`}
             >
                 <span>{text}</span>
             </a>
@@ -25,13 +25,18 @@ function NavItem({ href, text }) {
 
 function Navbar() {
     return (
-        <div className='flex justify-evenly bg-gray-800 py-4 items-center shadow-2xl sticky top-0 z-10'>
+
+
+        <div className='bg-gray-800 flex justify-evenly  py-4 items-center shadow-2xl sticky top-0 z-10 over'>
 
             <NavItem href={'/'} text="Home" />
             <NavItem href={'/about'} text="About" />
             <NavItem href={'/dashboard'} text="Dashboard" />
             <NavItem href={'/mywork'} text="My Work" />
+
+
         </div>
+
     )
 }
 
