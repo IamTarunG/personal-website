@@ -1,8 +1,16 @@
-import Link from "next/link"
+import { motion } from "framer-motion";
 
 function ProjectCard({ title, link, description }) {
+    const item = {
+        visible: { opacity: 1, x: 0 },
+        hidden: { opacity: 0, x: -100 }
+    }
     return (
-        <div className="metric-card dark:bg-gray-900 border border-gray-800 dark:border-gray-800 rounded-lg p-4 max-w-72 w-full">
+        <motion.div className="metric-card dark:bg-gray-900 border border-gray-800 dark:border-gray-800 rounded-lg p-4 max-w-72 w-full"
+            variants={item}
+            whileHover={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 11 }}
+        >
             <a
                 aria-label={title}
                 target="_blank"
@@ -28,11 +36,10 @@ function ProjectCard({ title, link, description }) {
                 </div>
             </a>
             <p className="mt-2 text-sm spacing-sm  text-gray-400 dark:text-gray-400 ">
-
                 {description}
             </p>
-        </div>
-    )
+        </motion.div>
+    );
 }
 
-export default ProjectCard
+export default ProjectCard;

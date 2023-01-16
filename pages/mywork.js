@@ -1,7 +1,17 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import HeadContent from "../components/HeadContent";
+import { motion } from 'framer-motion'
 function MyWork() {
+    const list = {
+        visible: {
+            opacity: 1, transition: {
+                when: "beforeChildren",
+                staggerChildren: 0.4
+            }
+        },
+        hidden: { opacity: 0, }
+    }
     return (
         <main>
             <HeadContent
@@ -17,7 +27,7 @@ function MyWork() {
                 </p>
             </section>
 
-            <section className="grid gap-4 grid-cols-1 sm:grid-cols-2 pb-10 w-full px-20">
+            <motion.section className="grid gap-4 grid-cols-1 sm:grid-cols-2 pb-10 w-full px-20" initial="hidden" animate="visible" variants={list}>
                 <ProjectCard
                     title={"Project Management"}
                     description="The Project Management application provides ease of use to the clients to manage the projects. the client can add, edit and delete the project.the project is built using ReactJS, Express, Mongo DB, NodeJS And GraphQL."
@@ -45,7 +55,7 @@ function MyWork() {
                     description="The E-Authentication System application uses both QR code and OTP to authenticate the user.The QR code is to be downloaded and scanned by the user, the OTP is sent to user's email and the corresponding OTP to be entered to access the main page."
                     link={"https://github.com/IamTarunG/E-authentication-System"}
                 />
-            </section>
+            </motion.section>
         </main>
     );
 }

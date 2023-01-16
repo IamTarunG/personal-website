@@ -1,7 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-
+import { motion } from 'framer-motion'
 function SingleImage({ href, src, width, height }) {
+
     return (
         <Link href={href}>
             <a target="_blank" className="text-center">
@@ -16,6 +17,7 @@ function SingleImage({ href, src, width, height }) {
     )
 }
 function ImageGrid() {
+
     return (
 
         <div>

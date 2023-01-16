@@ -1,8 +1,14 @@
-
+import { motion } from "framer-motion";
 
 function MetricCard({ title, link, metric }) {
     return (
-        <div className="metric-card dark:bg-gray-900 border border-gray-800 dark:border-gray-800 rounded-lg p-4 max-w-72 w-full">
+        <motion.div
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 19 }}
+            whileHover={{ scale: 0.9 }}
+            transition={{ type: "spring", stiffness: 200, damping: 6 }}
+            className="metric-card dark:bg-gray-900 border border-gray-800 dark:border-gray-800 rounded-lg p-4 max-w-72 w-full"
+        >
             <a
                 aria-label={title}
                 target="_blank"
@@ -28,11 +34,10 @@ function MetricCard({ title, link, metric }) {
                 </div>
             </a>
             <p className="mt-2 text-3xl font-bold spacing-sm text-white dark:text-white">
-
-                {metric > 0 ? metric.toLocaleString() : '-'}
+                {metric > 0 ? metric.toLocaleString() : "-"}
             </p>
-        </div>
-    )
+        </motion.div>
+    );
 }
 
-export default MetricCard
+export default MetricCard;
