@@ -13,7 +13,7 @@ function Dashboard() {
             <section className="mt-20 text-center">
                 <p className="text-white dark:text-gray-100 font-bold text-3xl md:text-3xl tracking-tight mb-5">Dashboard</p>
                 <p className="mb-5 text-gray-400 dark:text-gray-400 lg:mx-96 sm:mx-10">
-                    This dashboard consists the metrics of my Unsplash 3D renders.
+                    This dashboard consists the metrics of my Unsplash 3D renders and my Top Spotify Tracks.
                 </p>
             </section>
             <section className="lg:mx-96 sm:mx-20">
