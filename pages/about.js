@@ -14,7 +14,7 @@ function About() {
                     <br />
                     I build Web Applications. I explore the latest frameworks related to JavaScript, but I stick to only one.
                     I am currently using <Link href={'https://nextjs.org/'}><a className="underline">Next.js</a></Link> as my frontend tool.
-                    I love to do 3D renders using <Link href={'https://www.blender.org/'}><a className="underline">Blender</a></Link>. In my free time I write blogs on <Link href={'https://medium.com/@tarungudipalli'}><a className="underline">Medium</a></Link> about Web and other stuff.
+                    I love to do 3D renders using <Link href={'https://www.blender.org/'}><a className="underline">Blender</a></Link>.
 
                 </p>
             </section>
