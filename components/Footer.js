@@ -41,7 +41,11 @@ function Footer() {
                             Unsplash
                         </a>
                     </Link>
-
+                     <Link href="https://medium.com/@tarungudipalli">
+                        <a className="text-gray-500 hover:text-gray-600 transition" target={"_blank"}>
+                            Medium
+                        </a>
+                    </Link>
                     <Link href="https://twitter.com/_tarungudipalli">
                         <a className="text-gray-500 hover:text-gray-600 transition" target={"_blank"}>
                             Twitter
