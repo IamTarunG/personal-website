@@ -20,7 +20,7 @@ function Home() {
             Tarun Gudipalli
           </p>
           <p className="text-center text-gray-400 dark:text-gray-400">
-            Focused on Web Development. Love to do 3D renders.
+            I love learning new stuff!
           </p>
         </section>
 
