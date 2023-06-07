@@ -6,7 +6,7 @@ function Home() {
   return (
     <div>
       <main className="h-screen flex justify-center items-center">
-        <HeadContent title={"Tarun Gudipalli - Web Developer"} description="I'm a Web developer with a passion. In my free time, I enjoy building custom templates for Notion to help others streamline their workflow" />
+        <HeadContent title={"Tarun Gudipalli"} description="I love learning new stuff!" />
         <section className="flex justify-evenly items-center flex-col my-20 h-64">
           <Image
             alt="Tarun Gudipalli"
